@@ -33,7 +33,6 @@
         components: {DataTable},
         data () {
             return {
-
                 senatorF: [],
                 checkarr: [],
                 selectarr: '',
@@ -43,7 +42,7 @@
             }
         },
         created: function(){
-            this.getStates();
+            this.getData();
         },
         computed: {
             displayParty() {
@@ -69,8 +68,29 @@
             },
         },
         methods: {
+            getData() {
+                let pathSenate = 'senate';
+                let url = '';
+                let currentPage = window.location.href;
+                if (currentPage.includes(pathSenate)) {
+                    url = 'https://api.myjson.com/bins/1eja30';
+
+                } else {
+                    url = 'https://api.myjson.com/bins/j83do';
+                }
+                fetch(url)
+                    .then(response => response.json())
+                    .then((jsonData) => {
+                        let data = jsonData;
+                        this.senatorF = data.results[0].members;
+                        this.senatorF.forEach(mem => {
+                            mem.fullname = (mem.first_name + ' ' + mem.middle_name + ' ' + mem.last_name).replace(null, '');
+                        });
+                        this.getStates();
+                    });
+            },
             getStates: function () {
-                this.senatorF = this.$store.state.senator;
+                console.log(this.senatorF)
                 this.senatorF.forEach(mem => {
                     if (!this.statearr.includes(mem.state)) {
                         this.statearr.push(mem.state);

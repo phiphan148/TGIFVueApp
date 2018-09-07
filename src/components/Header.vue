@@ -4,14 +4,14 @@
             <div class="container-fluid h-100">
                 <div class="row h-100">
                     <div class="col-1 img-home">
-                        <router-link class="nav-link text-body" to="/"><img src="../assets/logo.png" class="img-fluid" alt="logo"></router-link>
+                        <router-link class="" to="/"><img class="img-fluid" src="../assets/logo.png" alt="logo"></router-link>
                     </div>
                     <div class="col-1 align-self-center">
-                        <router-link class="nav-link text-body" to="/">TGIF</router-link>
+                        <router-link class="text-body" to="/">TGIF</router-link>
                     </div>
                     <div class="col text-right align-self-center">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <a>Email</a>
+                        <a class="ml-1">Email</a>
                     </div>
                 </div>
             </div>
@@ -40,10 +40,10 @@
                             <a class="nav-link text-body" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Attendance</a>
                             <span class="caret"></span>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <!--<router-link class="dropdown-item" to="/data">Senate</router-link>-->
-                                <!--<router-link class="dropdown-item" to="/data">House</router-link>-->
-                                <!--<a class="dropdown-item" href="./senate-attendance.html">Senate</a>-->
-                                <!--<a class="dropdown-item" href="./house-attendance.html">House</a>-->
+                                <router-link class="dropdown-item" to="/senate-attendance">Senate</router-link>
+                                <router-link class="dropdown-item" to="/house-attendance">House</router-link>
+                                <!--<a class="dropdown-item" href="./senate-attendance">Senate</a>-->
+                                <!--<a class="dropdown-item" href="./house-attendance">House</a>-->
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -52,8 +52,8 @@
                             </a>
                             <span class="caret"></span>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <!--<router-link class="dropdown-item" to="/data">Senate</router-link>-->
-                                <!--<router-link class="dropdown-item" to="/data">House</router-link>-->
+                                <router-link class="dropdown-item" to="/senate-loyalty">Senate</router-link>
+                                <router-link class="dropdown-item" to="/house-loyalty">House</router-link>
                                 <!--<a class="dropdown-item" href="./senate-party-loyalty.html">Senate</a>-->
                                 <!--<a class="dropdown-item" href="./house-party-loyalty.html">House</a>-->
                             </div>

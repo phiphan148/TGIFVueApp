@@ -23,15 +23,11 @@
         components: {DataTable, FilterData},
         data(){
             return {
-                senator: [],
             }
         },
-        create: function() {
-            this.getDataSenate();
-        },
-        methods: {
-            getDataSenate: function(){
-                this.senator = this.$store.state.senator;
+        computed:{
+            senator(){
+                return this.$store.state.senator;
             }
         }
     };
