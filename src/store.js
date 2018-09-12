@@ -7,6 +7,10 @@ export default new Vuex.Store({
   state: {
       senator: [],
   },
-  mutations: {},
+  mutations: {
+      setCurrentSenator(state, senator){
+          this.state.senator = senator;
+      }
+  },
   actions: {}
 });

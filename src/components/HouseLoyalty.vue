@@ -10,21 +10,37 @@
             </div>
             <div class="col-lg-6 col-md-12">
                 <h5>House at a glance</h5>
-                <GlanceTable></GlanceTable>
+                <GlanceTable v-bind:memberData="senator"></GlanceTable>
             </div>
         </div>
         <hr>
-        <StatisticsTable></StatisticsTable>
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <TopTableLoyalty v-bind:senatorT="senator" ></TopTableLoyalty>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <BottomTableLoyalty v-bind:senatorB="senator"></BottomTableLoyalty>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
     import GlanceTable from "./GlanceTable";
-    import StatisticsTable from "./StatisticsTable";
+    import TopTableLoyalty from "./TopTableLoyalty";
+    import BottomTableLoyalty from "./BottomTableLoyalty";
 
     export default {
         name: "HouseLoyalty",
-        components: {GlanceTable, StatisticsTable},
+        components: {GlanceTable, BottomTableLoyalty, TopTableLoyalty},
+        beforeCreate(){
+            this.$parent.$parent.getData();
+        },
+        computed: {
+            senator() {
+                return this.$store.state.senator;
+            },
+        },
     };
 </script>
 

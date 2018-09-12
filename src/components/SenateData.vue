@@ -23,13 +23,12 @@
         components: {DataTable, FilterData},
         data(){
             return {
+
             }
         },
-        computed:{
-            senator(){
-                return this.$store.state.senator;
-            }
-        }
+        beforeCreate(){
+          this.$parent.$parent.getData();
+        },
     };
 </script>
 

@@ -32,8 +32,8 @@
                             </a>
                             <span class="caret"></span>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <router-link class="dropdown-item" to="/senate-data">Senate</router-link>
-                                <router-link class="dropdown-item" to="/house-data">House</router-link>
+                                <router-link :key class="dropdown-item" to="/senate-data">Senate</router-link>
+                                <router-link :key class="dropdown-item" to="/house-data">House</router-link>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -67,21 +67,19 @@
 </template>
 
 <script>
-    export default {
-        name: "Header",
-        data() {
-            return {
-
-            }
-        }
-    };
+export default {
+  name: "Header",
+  data() {
+    return {};
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    @media screen and (max-width: 768px){
-        .img-home {
-            display: none;
-        }
-    }
+@media screen and (max-width: 768px) {
+  .img-home {
+    display: none;
+  }
+}
 </style>

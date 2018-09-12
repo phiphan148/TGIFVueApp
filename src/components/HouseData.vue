@@ -20,6 +20,9 @@
     export default {
         name: "HouseData",
         components: {FilterData},
+        beforeCreate(){
+          this.$parent.$parent.getData();
+        },
     };
 </script>
 

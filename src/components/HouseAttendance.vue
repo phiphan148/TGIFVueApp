@@ -14,21 +14,37 @@
             </div>
             <div class="col-lg-6 col-md-12">
                 <h5>House at a glance</h5>
-                <GlanceTable></GlanceTable>
+                <GlanceTable v-bind:memberData="senator"></GlanceTable>
             </div>
         </div>
         <hr>
-        <StatisticsTable></StatisticsTable>
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <TopTable v-bind:senatorT="senator" ></TopTable>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <BottomTable v-bind:senatorB="senator"></BottomTable>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
     import GlanceTable from "./GlanceTable";
-    import StatisticsTable from "./StatisticsTable";
+    import TopTable from "./TopTable";
+    import BottomTable from "./BottomTable";
 
     export default {
         name: "HouseAttendance",
-        components: {GlanceTable, StatisticsTable},
+        components: {GlanceTable, TopTable, BottomTable},
+        beforeCreate(){
+          this.$parent.$parent.getData();
+        },
+        computed: {
+            senator() {
+                return this.$store.state.senator;
+            },
+        },
     };
 </script>
 
