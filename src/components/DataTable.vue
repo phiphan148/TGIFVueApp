@@ -8,7 +8,6 @@
             </tr>
             </thead>
             <tbody>
-            <!--<tr v-for="mem in displayParty">-->
             <tr v-for="mem in senator">
                 <td>{{mem.fullname}}</td>
                 <td>{{mem.party}}</td>

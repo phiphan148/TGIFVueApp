@@ -1,6 +1,6 @@
 <template>
     <div class="card-footer text-center">
-        <p>2016 TGIF</p>
+        <p>2018 TGIF</p>
     </div>
 </template>
 
