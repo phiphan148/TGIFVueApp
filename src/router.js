@@ -1,12 +1,12 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./components/Home.vue";
-import SenateData from "./components/SenateData.vue";
-import HouseData from "./components/HouseData.vue";
-import SenateAttendance from "./components/SenateAttendance.vue";
-import SenateLoyalty from "./components/SenateLoyalty.vue";
-import HouseLoyalty from "./components/HouseLoyalty.vue";
-import HouseAttendance from "./components/HouseAttendance.vue";
+import Home from "./views/Home.vue";
+import SenateData from "./views/SenateData.vue";
+import HouseData from "./views/HouseData.vue";
+import SenateAttendance from "./views/SenateAttendance.vue";
+import SenateLoyalty from "./views/SenateLoyalty.vue";
+import HouseLoyalty from "./views/HouseLoyalty.vue";
+import HouseAttendance from "./views/HouseAttendance.vue";
 
 Vue.use(Router);
 

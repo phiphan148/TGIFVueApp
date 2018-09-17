@@ -15,8 +15,8 @@
 </template>
 
 <script>
-    import DataTable from "./DataTable";
-    import FilterData from "./FilterData";
+    import DataTable from "../components/DataTable";
+    import FilterData from "../components/FilterData";
 
     export default {
         name: "SenateData",

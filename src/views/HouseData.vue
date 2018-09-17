@@ -16,7 +16,7 @@
 </template>
 
 <script>
-    import FilterData from "./FilterData";
+    import FilterData from "../components/FilterData";
     export default {
         name: "HouseData",
         components: {FilterData},

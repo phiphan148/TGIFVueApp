@@ -51,6 +51,7 @@
                         this.statearr.push(mem.state);
                     }
                 });
+                console.log(this.searchName)
                 return this.statearr;
             },
             displayParty() {

@@ -26,9 +26,9 @@
 </template>
 
 <script>
-    import GlanceTable from "./GlanceTable";
-    import TopTableLoyalty from "./TopTableLoyalty";
-    import BottomTableLoyalty from "./BottomTableLoyalty";
+    import GlanceTable from "../components/GlanceTable";
+    import TopTableLoyalty from "../components/TopTableLoyalty";
+    import BottomTableLoyalty from "../components/BottomTableLoyalty";
 
     export default {
         name: "SenateLoyalty",
